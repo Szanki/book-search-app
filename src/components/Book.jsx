@@ -66,6 +66,10 @@ export default function Book({ book }) {
         </Grid>
       </Grid>
       <Grid item className="ui-container-add-button">
+        {/* TODO: <FavouriveButton book={book.id}/>
+        const { myBooks } = MyBooksContext;
+        const shouldDisplayRemoveFromFavouritesButton = myBooks.some(book => book.id === bookId);
+        return shouldDisplayRemoveFromFavouritesButton ? <RemoveButton bookId/> : <AddButton book/> */}
         <Button variant="contained" color="primary">
           Add to favorites
         </Button>
