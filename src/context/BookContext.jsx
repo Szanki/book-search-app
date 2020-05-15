@@ -7,6 +7,7 @@ const initialState = {
   googleBooks: [],
   error: "",
   searchTerm: "",
+  isPending: false
 };
 
 const googleBooksReducer = (prevState, action) => {
@@ -15,12 +16,20 @@ const googleBooksReducer = (prevState, action) => {
       return {
         ...prevState,
         googleBooks: action.payload,
+        isPending: false
       };
     case "SET_ERROR":
       return {
         ...prevState,
         error: "Something goes wrong!",
+        googleBooks: [],
+        isPending: false
       };
+    case "SET_IS_PENDING":
+      return {
+        ...prevState,
+        isPending: true
+      }
     case "SET_TERM":
       return {
         ...prevState,
@@ -32,7 +41,7 @@ const googleBooksReducer = (prevState, action) => {
 };
 
 const BooksContextProvider = (props) => {
-  const [{ googleBooks, error, searchTerm }, dispatch] = useReducer(
+  const [{ googleBooks, isPending, error, searchTerm }, dispatch] = useReducer(
     googleBooksReducer,
     initialState
   );
@@ -40,6 +49,7 @@ const BooksContextProvider = (props) => {
   const API_KEY = "AIzaSyCXx4CYC_kuKFQAaWrNxGWus3gw9hNe1b8";
 
   const fetchBooks = async () => {
+    dispatch({ type: "SET_IS_PENDING" })
     await axios
       .get(
         `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${API_KEY}&maxResults=10`
@@ -61,7 +71,7 @@ const BooksContextProvider = (props) => {
 
   return (
     <BookContext.Provider
-      value={{ googleBooks, fetchBooks, setTerm, searchTerm, onSearchSubmit }}
+      value={{ googleBooks, fetchBooks, setTerm, searchTerm, onSearchSubmit, isPending }}
     >
       {props.children}
     </BookContext.Provider>
