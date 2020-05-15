@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { Button } from "@material-ui/core";
 import "../book.css";
 
-export default function Book(props) {
+export default function Book({ book }) {
   // const {setTerm} =useContext(BookContext)
   const {
     title,
@@ -12,7 +12,7 @@ export default function Book(props) {
     authors,
     imageLinks,
     previewLink,
-  } = props.book.volumeInfo;
+  } = book.volumeInfo;
 
   console.log(authors);
 

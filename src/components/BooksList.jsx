@@ -5,7 +5,7 @@ import Book from "./Book";
 import { CircularProgress } from "@material-ui/core";
 
 export default function BooksList() {
-  const { googleBooks, fetchBooks, searchTerm, isPending } = useContext(BookContext);
+  const { googleBooks, fetchBooks, searchTerm, isPending, wasRequestEmpty } = useContext(BookContext);
 
   useEffect(() => {
     fetchBooks();
@@ -22,6 +22,13 @@ export default function BooksList() {
       );
     }
 
+
+    if (wasRequestEmpty) {
+      {/* TODO: If you create custom component like "FeedbackComponent", style it, and render some text here */ }
+      // <FeedbackComponent wasRequestEmpty={wasRequestEmpty} googleBooks ={googleBooks} searchTerm= {searchTerm}/>
+      return <div> Can't found any matches. Try another one.</div>
+    }
+
     if (!googleBooks.length) {
       return searchTerm ? <div> Please click on "Search" button to find some books</div> : <div> Please fill search input above.</div>
     }
@@ -29,11 +36,11 @@ export default function BooksList() {
     return (
       <div className="book-list-container">
         {googleBooks.map((book) => {
-          return <Book key={book.id} book={book}></Book>;
+          return <Book key={book.id} book={book} />;
         })}
       </div>
     );
   };
 
-  return <>{renderBookList()}</>;
+  return renderBookList();
 }

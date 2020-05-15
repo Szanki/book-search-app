@@ -7,7 +7,8 @@ const initialState = {
   googleBooks: [],
   error: "",
   searchTerm: "",
-  isPending: false
+  isPending: false,
+  wasRequestEmpty: false,
 };
 
 const googleBooksReducer = (prevState, action) => {
@@ -15,7 +16,8 @@ const googleBooksReducer = (prevState, action) => {
     case "FETCH_STREAMS":
       return {
         ...prevState,
-        googleBooks: action.payload,
+        googleBooks: action.payload || [],
+        wasRequestEmpty: !action.payload,
         isPending: false
       };
     case "SET_ERROR":
@@ -41,11 +43,11 @@ const googleBooksReducer = (prevState, action) => {
 };
 
 const BooksContextProvider = (props) => {
-  const [{ googleBooks, isPending, error, searchTerm }, dispatch] = useReducer(
+  const [{ googleBooks, isPending, wasRequestEmpty, error, searchTerm }, dispatch] = useReducer(
     googleBooksReducer,
     initialState
   );
-
+  // TODO: for sure you need to move that API_KEY away from source code.
   const API_KEY = "AIzaSyCXx4CYC_kuKFQAaWrNxGWus3gw9hNe1b8";
 
   const fetchBooks = async () => {
@@ -71,7 +73,7 @@ const BooksContextProvider = (props) => {
 
   return (
     <BookContext.Provider
-      value={{ googleBooks, fetchBooks, setTerm, searchTerm, onSearchSubmit, isPending }}
+      value={{ googleBooks, fetchBooks, setTerm, searchTerm, onSearchSubmit, isPending, wasRequestEmpty }}
     >
       {props.children}
     </BookContext.Provider>
