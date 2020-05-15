@@ -1,8 +1,12 @@
 import React, { useContext } from "react";
 import GoogleAuth from "../GoogleAuth";
 import { BookContext } from "../context/BookContext";
+import SearchInput from './SearchInput';
 
-export default function NavigationBar() {
+export default function NavigationBar(props) {
+
+  // console.log(props);
+  // const bookContext = props.locaion.path === '/books/mylist' ? MyBookContext : FetchBooksContext
   const { setTerm, onSearchSubmit, searchTerm } = useContext(BookContext);
 
   return (
@@ -11,17 +15,7 @@ export default function NavigationBar() {
         <li>My book list</li>
         <li>Monthly ranking</li>
       </ul>
-      <form onSubmit={onSearchSubmit} className="navigation-form-container">
-        <input
-          type="text"
-          placeholder="What do you want to read?"
-          autoComplete="off"
-          value={searchTerm}
-          onChange={setTerm}
-        />
-        <input type="submit" value="Search" />
-      </form>
-
+      <SearchInput onSearchSubmit={onSearchSubmit} setTerm={setTerm} searchTerm={searchTerm} />
       <GoogleAuth />
     </div>
   );
