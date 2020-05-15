@@ -16,7 +16,7 @@ export default function BooksList() {
     if (isPending) {
       return (
         <div className="spinner-container">
-          <CircularProgress className="spinner" />
+          <CircularProgress style={{ width: '150px', height: '150px' }} />
         </div>
         // <div className="spinner-container">loading</div>
       );
