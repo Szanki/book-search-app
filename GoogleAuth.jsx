@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useRef } from "react";
-import { AuthContext } from "./context/AuthContext";
+import { AuthContext } from "./src/context/AuthContext";
 
 const GoogleAuth = () => {
   const { signOut, signIn, isSignedIn } = useContext(AuthContext);
@@ -20,7 +20,7 @@ const GoogleAuth = () => {
           auth.current.isSignedIn.listen(onAuthChange);
         });
     });
-  }, []);
+  }, [onAuthChange]);
 
   const onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
