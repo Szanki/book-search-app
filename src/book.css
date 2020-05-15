@@ -71,6 +71,8 @@ img {
 .text {
   font-size: 0.9rem;
   height: 100%;
+  overflow: auto;
+  max-height: 150px;
 }
 
 .footer {

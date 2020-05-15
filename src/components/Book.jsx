@@ -48,21 +48,20 @@ export default function Book(props) {
         direction="column"
         justify="space-between"
       >
-        <Grid xs={7} xl={6} lg={5}>
-          <Grid item xs={1} xl={1} lg={1}>
+        <Grid >
+          <Grid item>
             <p className="area title">{title}</p>
           </Grid>
-          <Grid item xs={1} xl={1} lg={1}>
+          <Grid item>
             <p className="area publishing-house">
               {authors ? renderAuthors() : null}
             </p>
           </Grid>
-          <Grid item xs={4} xl={3} lg={3}>
+          <Grid item >
             <p className=" area text">{description}</p>
           </Grid>
         </Grid>
-        {/* justify="flex-end" */}
-        <Grid item xs={1} xl={1} lg={1}>
+        <Grid >
           <p className="footer">Lorem ipsum, dolor</p>
         </Grid>
       </Grid>
