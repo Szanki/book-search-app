@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import GoogleAuth from "../GoogleAuth";
 import { BookContext } from "../context/BookContext";
+import { Link } from "react-router-dom";
 
 export default function HomeSearch() {
-  // const { searchTerm, setTerm } = useContext(BookContext);
+  const { searchTerm, setTerm } = useContext(BookContext);
 
   return (
     <>
@@ -12,12 +13,15 @@ export default function HomeSearch() {
         <form className="flex-form">
           <input
             type="text"
+            className="home-search"
             placeholder="What do you want to read?"
-            autoComplet="off"
-            // value={searchTerm}
-            // onChange={(e) => setTerm(e.target.value)}
+            autoComplete="off"
+            value={searchTerm}
+            onChange={setTerm}
           />
-          <input type="submit" value="Search" />
+          <Link to="/books/list" className="searchInput" type="submit">
+            Search
+          </Link>
         </form>
       </div>
       <div className="fullscreen-video-wrap">

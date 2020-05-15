@@ -4,14 +4,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .app-container {
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
@@ -47,7 +48,7 @@ body {
   border-bottom: 1px solid white;
 }
 
-.flex-form input[type="submit"] {
+.flex-form .searchInput {
   background: #ff5a5f;
   border-top: 1px solid #ff5a5f;
   border-bottom: 1px solid #ff5a5f;
@@ -81,7 +82,7 @@ body {
   display: flex;
 }
 
-input[type="text"] {
+.flex-form .home-search {
   min-width: 500px;
 }
 
@@ -97,4 +98,72 @@ input[type="text"] {
 
 .ui.red.button {
   font-size: 1.6rem;
+}
+
+/* navbar styles */
+
+li {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #edf0f1;
+  list-style: none;
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.navigation-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 1%;
+  min-height: 125px;
+  max-height: 125px;
+  background-color: #24252a;
+}
+
+.navigation-form-container {
+  display: flex;
+  border-radius: 10rem;
+  font-size: 1.5rem;
+}
+
+.navigation-form-container input[type="text"] {
+  padding-left: 10px;
+  min-width: 350px;
+}
+
+.navigation-form-container input[type="text"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.navigation-form-container input[type="submit"] {
+  transition: all 0.3s ease 0s;
+  padding: 9px 15px;
+}
+
+/* li animation */
+
+li {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+li:hover {
+  transition: all 0.3s ease 0s;
+  color: #0088a9;
+}
+
+/* user panel button form transform */
+
+.navigation-form-container input[type="submit"]:hover {
+  background-color: rgb(167, 20, 20);
+}
+
+/* book list styles */
+
+/* style form google button for user panel */
+
+.navigation-bar-container .google-button-container {
+  position: static;
 }
