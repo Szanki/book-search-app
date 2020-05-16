@@ -18,20 +18,20 @@ const googleBooksReducer = (prevState, action) => {
         ...prevState,
         googleBooks: action.payload || [],
         wasRequestEmpty: !action.payload,
-        isPending: false
+        isPending: false,
       };
     case "SET_ERROR":
       return {
         ...prevState,
         error: "Something goes wrong!",
         googleBooks: [],
-        isPending: false
+        isPending: false,
       };
     case "SET_IS_PENDING":
       return {
         ...prevState,
-        isPending: true
-      }
+        isPending: true,
+      };
     case "SET_TERM":
       return {
         ...prevState,
@@ -43,15 +43,15 @@ const googleBooksReducer = (prevState, action) => {
 };
 
 const BooksContextProvider = (props) => {
-  const [{ googleBooks, isPending, wasRequestEmpty, error, searchTerm }, dispatch] = useReducer(
-    googleBooksReducer,
-    initialState
-  );
+  const [
+    { googleBooks, isPending, wasRequestEmpty, error, searchTerm },
+    dispatch,
+  ] = useReducer(googleBooksReducer, initialState);
   // TODO: for sure you need to move that API_KEY away from source code.
   const API_KEY = "AIzaSyCXx4CYC_kuKFQAaWrNxGWus3gw9hNe1b8";
 
   const fetchBooks = async () => {
-    dispatch({ type: "SET_IS_PENDING" })
+    dispatch({ type: "SET_IS_PENDING" });
     await axios
       .get(
         `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${API_KEY}&maxResults=10`
@@ -73,7 +73,15 @@ const BooksContextProvider = (props) => {
 
   return (
     <BookContext.Provider
-      value={{ googleBooks, fetchBooks, setTerm, searchTerm, onSearchSubmit, isPending, wasRequestEmpty }}
+      value={{
+        googleBooks,
+        fetchBooks,
+        setTerm,
+        searchTerm,
+        onSearchSubmit,
+        isPending,
+        wasRequestEmpty,
+      }}
     >
       {props.children}
     </BookContext.Provider>

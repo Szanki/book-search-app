@@ -1,11 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import GoogleAuth from "../GoogleAuth";
 import { BookContext } from "../context/BookContext";
 import { Link } from "react-router-dom";
-import { Input } from '@material-ui/core';
+import { Input } from "@material-ui/core";
+import HomeSearchInput from "./SearchInput";
 
 export default function HomeSearch() {
-  const { searchTerm, setTerm, fetchBooks, onSearchSubmit } = useContext(BookContext);
+  const { searchTerm, setTerm, fetchBooks, onSearchSubmit } = useContext(
+    BookContext
+  );
 
   return (
     <>
@@ -13,7 +16,13 @@ export default function HomeSearch() {
       <div className="home-form-container">
         <div className="flex-form">
           {/* TODO: My suggestion is to move this input to new component ( new jsx file) */}
-          <Input
+          {/* <HomeSearchInput
+            searchTerm={searchTerm}
+            setTerm={setTerm}
+            onSearchSubmit={onSearchSubmit}
+            fetchBooks={fetchBooks}
+          /> */}
+          <input
             type="text"
             className="home-search"
             placeholder="What do you want to read?"
