@@ -27,18 +27,12 @@ export default function BooksList() {
       );
     }
 
-    if (wasRequestEmpty) {
-      return (
-        <FeedbackComponent text="Can't found any matches. Try another one." />
-      );
-    }
-
-    if (!googleBooks.length) {
-      return searchTerm ? (
-        <FeedbackComponent text='Please click on "Search" button to find some books' />
-      ) : (
-        <FeedbackComponent text="Please fill search input above." />
-      );
+    if (wasRequestEmpty || !googleBooks.length) {
+      return <FeedbackComponent
+        wasRequestEmpty={wasRequestEmpty}
+        noBooks={!googleBooks.length}
+        noSearchTerm={!searchTerm}
+      />
     }
 
     return (
