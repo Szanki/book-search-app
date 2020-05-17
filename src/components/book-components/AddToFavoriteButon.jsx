@@ -3,26 +3,13 @@ import { UserBooksContext } from "../../context/UserBooksContext";
 import Grid from "@material-ui/core/Grid";
 import { Button } from "@material-ui/core";
 
-export default function AddToFavoriteButon({
-  id,
-  title,
-  description,
-  previewLink,
-  imageLinks,
-  authors,
-  
-}) {
+export default function AddToFavoriteButon(props) {
   const { addBookToFavorite } = useContext(UserBooksContext);
 
   const onButtonClick = () => {
     const favoriteBook = {
-      id: id,
-      title: title,
-      authors: authors,
-      description: description,
-      previewLink: previewLink,
-      imageLinks: imageLinks,
-    };
+      ...props
+    }
     addBookToFavorite(favoriteBook);
   };
 

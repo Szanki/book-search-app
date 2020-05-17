@@ -140,6 +140,32 @@
         "thumbnail": "http://books.google.com/books/content?id=eNWb2sZbpZYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       "id": "JlcKhDC"
+    },
+    {
+      "title": "Replika",
+      "description": "DWIE DZIEWCZYNY DWIE HISTORIE JEDNA ZAPIERAJĄCA DECH W PIERSIACH POWIEŚĆ GEMMA ma kompleksy. Od zawsze była chorowita i dużo czasu spędzała w szpitalach – nosi po tym pamiątkę w postaci blizny w okolicy serca. W szkole koleżanki jej dokuczają, chłopaki z klasy nie interesują się nią i nie ma przyjaciół. Rodzice, chcąc wynagrodzić córce trudne dzieciństwo, trzymają ją pod kloszem, ale to nie wpływa dobrze na Gemmę. Gdy pojawia się okazja wyjazdu na wycieczkę na Florydę, dziewczyna postanawia wyrwać się ze swojej miejscowości i na chwilę zapomnieć o troskach. Niestety w ostatniej chwili rodzice zakazują jej wyjazdu. Gemma podsłuchuje ich rozmowę i dowiaduje się, że ma to związek z tajemniczą kliniką, znajdującą się na wyspie niedaleko miejsca, gdzie miała jechać. Postanawia więc uciec z domu i sprawdzić, co tak naprawdę się tam stało. Jakie tajemnice odkryje? I co łączy ją z Lirą, dziewczyną, którą spotka na swojej drodze? LIRA to replika, czyli klon. Odkąd pamięta, jest „hodowna” razem z innymi replikami w odosobnionym ośrodku Haven. Strażnicy i inni członkowie personelu traktują je jak przedmioty. Gdy wielka eksplozja wstrząsa ośrodkiem, Lira, jej koleżanka Kasjopeja i męska replika o numerze 72 wydostają się na wolność... Poznaj losy Gemmy i Liry w niezwykłej formie. W każdym momencie możesz odwrócić książkę i spojrzeć na wydarzenia oczami drugiej bohaterki. „Elektryzująca i aktualna książka, przy której twój puls przyspieszy, a serce może pęknąć z emocji. Dwie wielowymiarowe bohaterki, dwie intrygujące zagadki, dwie splecione ze sobą historie – a wszystko to połączone w jedną zaskakującą powieść”. Victoria Aveyard autorka bestsellerowej serii „Czerwona Królowa”",
+      "previewLink": "http://books.google.pl/books?id=1rs9DwAAQBAJ&pg=PT23&dq=dupsko&hl=&cd=1&source=gbs_api",
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=1rs9DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=1rs9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "authors": [
+        "Lauren Oliver"
+      ],
+      "id": "ndFVev0"
+    },
+    {
+      "title": "Sensory Testing Methods",
+      "previewLink": "http://books.google.pl/books?id=a0NyZJKgqyIC&pg=PA25&dq=test&hl=&cd=8&source=gbs_api",
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=a0NyZJKgqyIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=a0NyZJKgqyIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "authors": [
+        "Francis J. Pilgrim",
+        "David R. Peryam"
+      ],
+      "id": "4-iafUo"
     }
   ]
 }

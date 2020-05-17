@@ -4,10 +4,11 @@ import { CircularProgress } from "@material-ui/core";
 import Book from './Book'
 
 export default function UserBooks() {
-  const { fetchUserBooks, userBooks, isPending } = useContext(UserBooksContext);
+  const { fetchUserBooks, filteredBooks, isPending } = useContext(UserBooksContext);
 
   useEffect(() => {
     fetchUserBooks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const renderBookList = () => {
@@ -21,13 +22,13 @@ export default function UserBooks() {
     }
     return (
       <div className="book-list-container">
-        {Object.values(userBooks).map((book) => {
+        {Object.values(filteredBooks).map((book) => {
           return <Book key={book.id} book={book} />;
         })}
       </div>
-    
+
     );
   }
 
-return <div>{renderBookList()}</div>;
+  return <div>{renderBookList()}</div>;
 }
