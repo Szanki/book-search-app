@@ -18,6 +18,7 @@ export default function HomeSearchInput({
         onChange={setTerm}
         onSubmit={onSearchSubmit}
       />
+      {/* fetchBooks here and in BookList componnet */}
       <Link to="/books/list" className="searchInput" onClick={fetchBooks}>
         Search
       </Link>

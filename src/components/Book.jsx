@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { BookContext } from "../context/BookContext";
 import Grid from "@material-ui/core/Grid";
 import AddToFavoriteButon from "./book-components/AddToFavoriteButon";
 import BookImage from "./book-components/BookImage";
@@ -14,7 +13,7 @@ export default function Book({ book }) {
     authors,
     imageLinks,
     previewLink,
-  } = book.volumeInfo;
+  } = book;
 
   const renderAuthors = () => {
     return (
@@ -46,7 +45,14 @@ export default function Book({ book }) {
         renderAuthors={renderAuthors}
         description={description}
       />
-      <AddToFavoriteButon />
+      <AddToFavoriteButon
+        id={book.id}
+        title={title}
+        description={description}
+        previewLink={previewLink}
+        imageLinks={imageLinks}
+        authors={authors}
+      />
     </Grid>
   );
 }

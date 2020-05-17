@@ -5,21 +5,25 @@ import BooksList from "./BooksList";
 import NavigationBar from "./NavigationBar";
 import AuthContextProvider from "../context/AuthContext";
 import BooksContextProvider from "../context/BookContext";
+import UserBooksContextProvider from "../context/UserBooksContext";
+import UserBooks from "./UserBooks";
 
 export default function Container() {
   return (
     <div className="app-container">
       <BrowserRouter>
-        <BooksContextProvider>
-          <AuthContextProvider>
-            <React.Fragment>
-              <Route path="/" exact component={HomeSearch} />
-
-              <Route path="/books" component={NavigationBar} />
-              <Route path="/books/list" component={BooksList} />
-            </React.Fragment>
-          </AuthContextProvider>
-        </BooksContextProvider>
+        <UserBooksContextProvider>
+          <BooksContextProvider>
+            <AuthContextProvider>
+              <React.Fragment>
+                <Route path="/" exact component={HomeSearch} />
+                <Route path="/books" component={NavigationBar} />
+                <Route path="/books/list" component={BooksList} />
+                <Route path="/books/userbooks" component={UserBooks} />
+              </React.Fragment>
+            </AuthContextProvider>
+          </BooksContextProvider>
+        </UserBooksContextProvider>
       </BrowserRouter>
     </div>
   );
