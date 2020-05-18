@@ -1,13 +1,15 @@
 ## Book search App
 
 An application used to get data form google Api, based on user preference. User can add books to own favorite list and filter through scores of this list.
-Built with React
+Built with React, react-router, context.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Project Status
 
-This project is currently in development. Functionality to remove books from favorite is in progress. Some styles and responsive design will be fixed. 
+This project is currently in development. Functionality to remove books from favorite is in progress. Some styles and responsive design need to be fixed. 
+
+
 
 ## Installation and Setup Instructions
 
@@ -19,9 +21,9 @@ To Run client:
 
 ### `npm start`
 
-To Start json-server:
+To Start json-server - you need go through to api directory and:
 
-You need go through to api directory and:
+### `npm install`
 
 ### `npm start`
 
@@ -31,9 +33,6 @@ localhost:3000/
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 
 ### `npm run build`
