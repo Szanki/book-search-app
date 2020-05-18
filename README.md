@@ -1,4 +1,11 @@
+## Book seacrh App
+
+An application used to get data form google api, based on user preference. User can add books to own favorite list and filter through scores of this list.
+Built with React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Status
 
 ## Available Scripts
 
