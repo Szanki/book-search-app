@@ -1,5 +1,6 @@
 import React, { useReducer, createContext } from "react";
 import axios from "axios";
+require("dotenv").config();
 
 export const BookContext = createContext();
 
@@ -47,7 +48,6 @@ const BooksContextProvider = (props) => {
     { googleBooks, isPending, wasRequestEmpty, error, searchTerm },
     dispatch,
   ] = useReducer(googleBooksReducer, initialState);
-  // TODO: for sure you need to move that API_KEY away from source code.
   const API_KEY = process.env.REACT_APP_API_KEY;
 
   const fetchBooks = async () => {
