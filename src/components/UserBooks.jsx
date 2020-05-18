@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useContext } from "react";
 import { UserBooksContext } from "../context/UserBooksContext";
 import { CircularProgress } from "@material-ui/core";
@@ -22,7 +23,7 @@ export default function UserBooks() {
       );
     }
 
-    if (!filteredBooks.length) {
+    if (!Object.values(filteredBooks).length) {
       return <FeedbackComponent noUserBooks={!filteredBooks.length} />;
     }
 

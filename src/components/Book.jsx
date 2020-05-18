@@ -5,7 +5,7 @@ import BookImage from "./book-components/BookImage";
 import BookContent from "./book-components/BookContent";
 import "../book.css";
 
-export default function Book({ book }) {
+export default function Book({ book, googleId }) {
   // const {setTerm} =useContext(BookContext)
   const {
     title,
@@ -46,7 +46,7 @@ export default function Book({ book }) {
         description={description}
       />
       <AddToFavoriteButon
-        id={book.id}
+        id={googleId}
         title={title}
         description={description}
         previewLink={previewLink}

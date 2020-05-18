@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useContext } from "react";
 import { BookContext } from "../context/BookContext";
 import Book from "./Book";
@@ -39,7 +40,7 @@ export default function BooksList() {
     return (
       <div className="book-list-container">
         {googleBooks.map((book) => {
-          return <Book key={book.id} book={book.volumeInfo} />;
+          return <Book googleId={book.id} key={book.id} book={book.volumeInfo} />;
         })}
       </div>
     );
