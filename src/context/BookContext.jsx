@@ -48,7 +48,7 @@ const BooksContextProvider = (props) => {
     dispatch,
   ] = useReducer(googleBooksReducer, initialState);
   // TODO: for sure you need to move that API_KEY away from source code.
-  const API_KEY = "AIzaSyCXx4CYC_kuKFQAaWrNxGWus3gw9hNe1b8";
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   const fetchBooks = async () => {
     dispatch({ type: "SET_IS_PENDING" });
