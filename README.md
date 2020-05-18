@@ -11,9 +11,23 @@ This project is currently in development. Functionality to remove books from fav
 
 ## Installation and Setup Instructions
 
-In the project directory, you can run:
+Clone down this repository. You will need node and npm installed globally on your machine.
+
+To Run client:
+
+### `npm install`
 
 ### `npm start`
+
+To Start json-server:
+
+You need go through to api directory and:
+
+### `npm start`
+
+To Visit App:
+
+localhost:3000/
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -21,10 +35,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
