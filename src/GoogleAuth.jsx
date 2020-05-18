@@ -1,19 +1,17 @@
 import React, { useEffect, useContext, useRef } from "react";
 import { AuthContext } from "./context/AuthContext";
 require("dotenv").config();
-console.log(process.env);
+console.log(process.env.REACT_APP_API_ID);
 
 const GoogleAuth = () => {
   const { signOut, signIn, isSignedIn } = useContext(AuthContext);
-  const api_key = process.env.GOOGLE_AUTH_ID;
-  // console.log(api_key);
+
   const auth = useRef(null);
   useEffect(() => {
     window.gapi.load("client:auth2", () => {
       window.gapi.client
         .init({
-          clientId:
-            "211307961778-ljh837fgppubb3qe8v49h32gau6knqd3.apps.googleusercontent.com",
+          clientId: process.env.REACT_APP_API_ID,
           scope: "email",
         })
         .then(() => {
