@@ -38,6 +38,36 @@
       "authors": [
         "Mike Lawrence"
       ]
+    },
+    {
+      "id": "quX_CwAAQBAJ",
+      "title": "Polecenie test",
+      "description": "Wszystko można przetestować, ale jak to zrobić z poziomu powłoki? Podczas wykorzystywania instrukcji sterujących w skryptach czy programach często napotykamy się na dokonywanie porównania czy sprawdzenia spełnienia jakiegoś warunku. Warunki te mogą opierać się zarówno o porównanie liczb jak i porównanie ciągu znaków czy sprawdzenia istnienia, zawartości lub typu pliku. Wszystkie powyższe warunki można sprawdzić wykorzystując polecenie test. Mikro-kurs ten jest obowiązkowy aby umieć tworzyć bardziej skomplikowane skrypty. Słowa kluczowe: test, porównanie, większy, mniejszy, czy istnieje Polecenie test Testowanie warunków Polecenie test Testowania wyrażeń arytmetycznych",
+      "previewLink": "http://books.google.pl/books?id=quX_CwAAQBAJ&pg=PP4&dq=test&hl=&cd=2&source=gbs_api",
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=quX_CwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=quX_CwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "authors": [
+        "Noite.pl"
+      ],
+      "userId": "113148770151688714889"
+    },
+    {
+      "id": "vHlTOVTKHeUC",
+      "title": "How Google Tests Software",
+      "description": "Describes the techniques Google uses to test their software, and offers similiar techniques for analyzing risk and planning tests, allowing an Internet company to become more productive.",
+      "previewLink": "http://books.google.pl/books?id=vHlTOVTKHeUC&printsec=frontcover&dq=test&hl=&cd=1&source=gbs_api",
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=vHlTOVTKHeUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=vHlTOVTKHeUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "authors": [
+        "James A. Whittaker",
+        "Jason Arbon",
+        "Jeff Carollo"
+      ],
+      "userId": "113148770151688714889"
     }
   ]
 }

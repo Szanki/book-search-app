@@ -8,7 +8,6 @@ import { AuthContext } from "../../context/AuthContext";
 import UserNotLoggedIn from "./ButtonComponents/UserNotLoggedIn";
 
 export default function AddToFavoriteButon(props) {
-  debugger;
   const { userId, isSignedIn } = useContext(AuthContext);
   const { addBookToFavorite, userBooks, deleteBook } = useContext(
     UserBooksContext

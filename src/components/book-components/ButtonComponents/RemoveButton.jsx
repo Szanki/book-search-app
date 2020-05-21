@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@material-ui/core";
-// import Modal from "../../DeleteBookModal";
-import { Link } from "react-router-dom";
+import DeleteBookModal from "../../DeleteBookModal";
 
 export default function RemoveButton(props) {
+  const [open, setOpen] = useState(false);
+  const showModal = () => {
+    setOpen(true)
+  }
+
   return (
-    // <Link to="/books/delete">
+    <>
     <Button
       variant="contained"
       color="secondary"
       className="add-to-favorite-button"
       style={{ fontWeight: 700 }}
-      onClick={props.onRemoveButtonClick}
+      onClick={showModal}
     >
       Delete from favorite
     </Button>
-    // </Link>
+    {open && <DeleteBookModal open={open} deleteBook={props.onRemoveButtonClick} cancel={() => setOpen(false)}/>}
+    </>
   );
 }
