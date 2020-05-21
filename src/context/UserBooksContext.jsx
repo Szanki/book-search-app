@@ -44,6 +44,7 @@ const userBooksReducer = (prevState, action) => {
       return {
         ...prevState,
         userBooks: _.omit(prevState.userBooks, action.payload),
+        filteredBooks: _.omit(prevState.userBooks, action.payload),
       };
     case "SET_TERM":
       return {
@@ -82,8 +83,7 @@ const UserBooksContextProvider = (props) => {
   const deleteBook = async (id) => {
     await books.delete(`/books/${id}`);
     dispatch({ type: "DELETE_BOOK", payload: id });
-    history.push("/books/userbooks");
-    // fetchUserBooks();
+    // history.push("/books/userbooks");
   };
 
   const onSearchSubmit = (e) => {

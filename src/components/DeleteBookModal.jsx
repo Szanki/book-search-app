@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Modal = (props) => {
+const DeleteBookModal = (props) => {
   return ReactDOM.createPortal(
     <div className="ui dimmer modals visible activce">
       <div className="ui standard modal visible active">
@@ -19,4 +19,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default DeleteBookModal;

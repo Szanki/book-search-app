@@ -8,7 +8,6 @@ import BooksContextProvider from "../context/BookContext";
 import UserBooksContextProvider from "../context/UserBooksContext";
 import UserBooks from "./UserBooks";
 import history from "../history";
-import { Modal } from "@material-ui/core";
 
 export default function Container() {
   return (
@@ -21,7 +20,6 @@ export default function Container() {
                 <Route path="/" exact component={HomeSearch} />
                 <Route path="/books" component={NavigationBar} />
                 <Route path="/books/list" component={BooksList} />
-                <Route path="/books/delete" exact component={Modal} />
                 <Route path="/books/userbooks" component={UserBooks} />
               </React.Fragment>
             </AuthContextProvider>
