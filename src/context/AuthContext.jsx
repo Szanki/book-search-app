@@ -27,7 +27,10 @@ const authReducer = (prevState = initialState, action) => {
 };
 
 const AuthContextProvider = (props) => {
-  const [{ isSignedIn }, dispatch] = useReducer(authReducer, initialState);
+  const [{ isSignedIn, userId }, dispatch] = useReducer(
+    authReducer,
+    initialState
+  );
 
   const signIn = (userId) => {
     dispatch({ type: "SIGN_IN", payload: userId });
@@ -38,7 +41,7 @@ const AuthContextProvider = (props) => {
   };
 
   return (
-    <AuthContext.Provider value={{ signIn, signOut, isSignedIn }}>
+    <AuthContext.Provider value={{ signIn, signOut, isSignedIn, userId }}>
       {props.children}
     </AuthContext.Provider>
   );

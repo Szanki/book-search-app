@@ -23,14 +23,14 @@ const GoogleAuth = () => {
 
   const onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
-      signIn();
+      signIn(auth.current.currentUser.get().getId());
     } else {
       signOut();
     }
   };
 
   const onSignInClick = () => {
-    auth.current.signIn(auth.current.currentUser.get().getId());
+    auth.current.signIn();
   };
 
   const onSignOutClick = () => {

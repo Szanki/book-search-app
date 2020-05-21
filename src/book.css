@@ -103,3 +103,7 @@ img {
 /* .star { */
 /* margin-left: 3px; */
 /* } */
+
+.user-not-logged {
+  font-weight: 600;
+}

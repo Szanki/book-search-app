@@ -1,11 +1,15 @@
 import React, { useContext, useState } from "react";
 import { UserBooksContext } from "../../context/UserBooksContext";
 import Grid from "@material-ui/core/Grid";
-import { Button, Snackbar } from "@material-ui/core";
+import { Snackbar } from "@material-ui/core";
 import RemoveButton from "./ButtonComponents/RemoveButton";
 import AddButton from "./ButtonComponents/AddButton";
+import { AuthContext } from "../../context/AuthContext";
+import UserNotLoggedIn from "./ButtonComponents/UserNotLoggedIn";
 
 export default function AddToFavoriteButon(props) {
+  debugger;
+  const { userId, isSignedIn } = useContext(AuthContext);
   const { addBookToFavorite, userBooks, deleteBook } = useContext(
     UserBooksContext
   );
@@ -14,6 +18,7 @@ export default function AddToFavoriteButon(props) {
   const onAddButtonClick = () => {
     const favoriteBook = {
       ...props,
+      userId: userId,
     };
     addBookToFavorite(favoriteBook);
     setOpen(true);
@@ -28,10 +33,14 @@ export default function AddToFavoriteButon(props) {
   };
 
   const renderButtonText = () => {
-    return Object.values(userBooks).some((book) => book.id === props.id) ? (
-      <RemoveButton onRemoveButtonClick={onRemoveButtonClick} />
+    return isSignedIn ? (
+      Object.values(userBooks).some((book) => book.id === props.id) ? (
+        <RemoveButton onRemoveButtonClick={onRemoveButtonClick} />
+      ) : (
+        <AddButton onAddButtonClick={onAddButtonClick} />
+      )
     ) : (
-      <AddButton onAddButtonClick={onAddButtonClick} />
+      <UserNotLoggedIn />
     );
   };
 
@@ -42,7 +51,8 @@ export default function AddToFavoriteButon(props) {
         const { myBooks } = MyBooksContext;
         const shouldDisplayRemoveFromFavouritesButton = myBooks.some(book => book.id === bookId);
         return shouldDisplayRemoveFromFavouritesButton ? <RemoveButton bookId/> : <AddButton book/> */}
-        <div>{renderButtonText()}</div>
+
+        <div> {renderButtonText()}</div>
       </Grid>
       <Snackbar
         anchorOrigin={{
