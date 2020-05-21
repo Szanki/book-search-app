@@ -1,56 +1,42 @@
 {
   "books": [
     {
-      "id": "5uRIb3emLY8C",
-      "title": "Tensile Testing, 2nd Edition",
-      "previewLink": "http://books.google.pl/books?id=5uRIb3emLY8C&printsec=frontcover&dq=test&hl=&cd=1&source=gbs_api",
+      "id": "G5e734HeR_oC",
+      "title": "How to Paint Classic Cars",
+      "description": "A really practical and heavily illustrated guide to the art of good preparation and achieving a paint finish to be proud of.",
+      "previewLink": "http://books.google.pl/books?id=G5e734HeR_oC&pg=PA10&dq=cars&hl=&cd=4&source=gbs_api",
       "imageLinks": {
-        "smallThumbnail": "http://books.google.com/books/content?id=5uRIb3emLY8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "thumbnail": "http://books.google.com/books/content?id=5uRIb3emLY8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        "smallThumbnail": "http://books.google.com/books/content?id=G5e734HeR_oC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=G5e734HeR_oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       "authors": [
-        "Joseph R. Davis"
+        "Martin Thaddeus"
       ]
     },
     {
-      "id": "vHlTOVTKHeUC",
-      "title": "How Google Tests Software",
-      "description": "Describes the techniques Google uses to test their software, and offers similiar techniques for analyzing risk and planning tests, allowing an Internet company to become more productive.",
-      "previewLink": "http://books.google.pl/books?id=vHlTOVTKHeUC&printsec=frontcover&dq=test&hl=&cd=2&source=gbs_api",
+      "id": "N7JEGIzoy6kC",
+      "title": "Cars Inside and Out",
+      "description": "Describes the structure and mechanics of automobiles, including how an engine works, what components generate an easier ride, and how electric and fuel cell cars differ from those with combustible engines.",
+      "previewLink": "http://books.google.pl/books?id=N7JEGIzoy6kC&pg=PP6&dq=cars&hl=&cd=3&source=gbs_api",
       "imageLinks": {
-        "smallThumbnail": "http://books.google.com/books/content?id=vHlTOVTKHeUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "thumbnail": "http://books.google.com/books/content?id=vHlTOVTKHeUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        "smallThumbnail": "http://books.google.com/books/content?id=N7JEGIzoy6kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=N7JEGIzoy6kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       "authors": [
-        "James A. Whittaker",
-        "Jason Arbon",
-        "Jeff Carollo"
+        "Chris Oxlade"
       ]
     },
     {
-      "id": "quX_CwAAQBAJ",
-      "title": "Polecenie test",
-      "description": "Wszystko można przetestować, ale jak to zrobić z poziomu powłoki? Podczas wykorzystywania instrukcji sterujących w skryptach czy programach często napotykamy się na dokonywanie porównania czy sprawdzenia spełnienia jakiegoś warunku. Warunki te mogą opierać się zarówno o porównanie liczb jak i porównanie ciągu znaków czy sprawdzenia istnienia, zawartości lub typu pliku. Wszystkie powyższe warunki można sprawdzić wykorzystując polecenie test. Mikro-kurs ten jest obowiązkowy aby umieć tworzyć bardziej skomplikowane skrypty. Słowa kluczowe: test, porównanie, większy, mniejszy, czy istnieje Polecenie test Testowanie warunków Polecenie test Testowania wyrażeń arytmetycznych",
-      "previewLink": "http://books.google.pl/books?id=quX_CwAAQBAJ&pg=PP4&dq=test&hl=&cd=3&source=gbs_api",
+      "id": "glKW-Kh-lmcC",
+      "title": "A to Z of Sports Cars, 1945-1990",
+      "description": "Presents a history of sports cars from the earliest models, to the hot rods of the 1950s and 1960s, to contemporary styles",
+      "previewLink": "http://books.google.pl/books?id=glKW-Kh-lmcC&pg=PT57&dq=cars&hl=&cd=2&source=gbs_api",
       "imageLinks": {
-        "smallThumbnail": "http://books.google.com/books/content?id=quX_CwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "thumbnail": "http://books.google.com/books/content?id=quX_CwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        "smallThumbnail": "http://books.google.com/books/content?id=glKW-Kh-lmcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=glKW-Kh-lmcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
       },
       "authors": [
-        "Noite.pl"
-      ]
-    },
-    {
-      "id": "ZRnZAgAAQBAJ",
-      "title": "Test wiary",
-      "description": "Trzecia część trylogii opowiadającej o losach Gabriela Fortisa, wybrańca niebios, który stara się pomagać ludziom w ich codziennych problemach i trudnych decyzjach. Na Ziemi wszystko zaczyna podążać w złym kierunku. Ludzie zapominają o tym co ważne i przejmują się tylko własnym, często zgubnym interesem. Nie zdają sobie sprawy jak bardzo prowadzi ich to do zguby. Na domiar złego Gabriel dowiaduje się o ciężkich przeżyciach Kasi, która nękana przez wybrańców piekieł wraca zdruzgotana do rodzinnego domu. Postanawia porzucić wszystkie narzucone mu zadania wybrańca, by poświęcić się tylko i wyłącznie swojej ukochanej. Wtedy w różnych zakątkach świata objawia się młodym księżom prorok. Zapowiada on nadchodzący koniec świata i prosi ich, by nakłonili wszystkich ludzi do poprawy swojego życia i przygotowania się do sądu ostatecznego. Ludzie ufają im bezgranicznie. Porzucają swoje dotychczasowe życie i wspólnie przygotowują się na nadchodzący koniec. Na świecie zaczyna dominować dobro, ale jedna sprawa martwi całe niebiosa – ów prorok nie jest ich wysłańcem.",
-      "previewLink": "http://books.google.pl/books?id=ZRnZAgAAQBAJ&pg=PA16&dq=test&hl=&cd=4&source=gbs_api",
-      "imageLinks": {
-        "smallThumbnail": "http://books.google.com/books/content?id=ZRnZAgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "thumbnail": "http://books.google.com/books/content?id=ZRnZAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "authors": [
-        "Krzysztof Lip"
+        "Mike Lawrence"
       ]
     }
   ]

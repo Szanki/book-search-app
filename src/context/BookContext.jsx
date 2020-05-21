@@ -48,7 +48,7 @@ const BooksContextProvider = (props) => {
     { googleBooks, isPending, wasRequestEmpty, error, searchTerm },
     dispatch,
   ] = useReducer(googleBooksReducer, initialState);
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = process.env.REACT_APP_BOOK_SEARCH_API_KEY;
 
   const fetchBooks = async () => {
     dispatch({ type: "SET_IS_PENDING" });

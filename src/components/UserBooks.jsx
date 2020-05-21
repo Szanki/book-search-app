@@ -6,7 +6,7 @@ import Book from "./Book";
 import FeedbackComponent from "./FeedbackComponent";
 
 export default function UserBooks() {
-  const { fetchUserBooks, filteredBooks, isPending } = useContext(
+  const { fetchUserBooks, filteredBooks, isPending, userBooks } = useContext(
     UserBooksContext
   );
 
@@ -30,7 +30,7 @@ export default function UserBooks() {
     return (
       <div className="book-list-container">
         {Object.values(filteredBooks).map((book) => {
-          return <Book key={book.id} book={book} />;
+          return <Book key={book.id} book={book} googleId={book.id} />;
         })}
       </div>
     );

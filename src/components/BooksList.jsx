@@ -4,6 +4,7 @@ import { BookContext } from "../context/BookContext";
 import Book from "./Book";
 import { CircularProgress } from "@material-ui/core";
 import FeedbackComponent from "./FeedbackComponent";
+import { UserBooksContext } from "../context/UserBooksContext";
 
 export default function BooksList() {
   const {
@@ -14,8 +15,11 @@ export default function BooksList() {
     wasRequestEmpty,
   } = useContext(BookContext);
 
+  const { fetchUserBooks } = useContext(UserBooksContext);
+
   useEffect(() => {
     fetchBooks();
+    fetchUserBooks();
   }, []);
 
   const renderBookList = () => {
@@ -40,7 +44,9 @@ export default function BooksList() {
     return (
       <div className="book-list-container">
         {googleBooks.map((book) => {
-          return <Book googleId={book.id} key={book.id} book={book.volumeInfo} />;
+          return (
+            <Book googleId={book.id} key={book.id} book={book.volumeInfo} />
+          );
         })}
       </div>
     );

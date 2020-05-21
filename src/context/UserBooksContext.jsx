@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from "react";
 import books from "../api/books";
+import history from "../history";
 import _ from "lodash";
 
 export const UserBooksContext = createContext();
@@ -39,9 +40,10 @@ const userBooksReducer = (prevState, action) => {
         },
       };
     case "DELETE_BOOK":
+      // debugger;
       return {
         ...prevState,
-        userBooks: _.omit(prevState, action.payload),
+        userBooks: _.omit(prevState.userBooks, action.payload),
       };
     case "SET_TERM":
       return {
@@ -80,6 +82,8 @@ const UserBooksContextProvider = (props) => {
   const deleteBook = async (id) => {
     await books.delete(`/books/${id}`);
     dispatch({ type: "DELETE_BOOK", payload: id });
+    history.push("/books/userbooks");
+    // fetchUserBooks();
   };
 
   const onSearchSubmit = (e) => {
@@ -116,6 +120,8 @@ const UserBooksContextProvider = (props) => {
         setTerm,
         searchTerm,
         onSearchSubmit,
+        userBooks,
+        deleteBook,
       }}
     >
       {props.children}

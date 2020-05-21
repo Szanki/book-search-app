@@ -6,14 +6,7 @@ import BookContent from "./book-components/BookContent";
 import "../book.css";
 
 export default function Book({ book, googleId }) {
-  // const {setTerm} =useContext(BookContext)
-  const {
-    title,
-    description,
-    authors,
-    imageLinks,
-    previewLink,
-  } = book;
+  const { title, description, authors, imageLinks, previewLink } = book;
 
   const renderAuthors = () => {
     return (
