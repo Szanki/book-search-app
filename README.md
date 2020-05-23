@@ -7,13 +7,22 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Project Status
 
-This project is currently in development. Functionality to remove books from favorite is in progress. Some styles and responsive design need to be fixed. 
-
+This project is currently in development. Some styles and responsive design need to be fixed. In the future site will allow users:
+ * Voting for favorite books
+ * Read an add comments on the blog (Monthly ranking)
+ * Not logged in user will get a chance for adding a book to "cart", after log in books will beautomatically added to favorite list
+ * Add comments to specific book 
 
 
 ## Installation and Setup Instructions
 
 Clone down this repository. You will need node and npm installed globally on your machine.
+
+In .env.EXAMPLE you need to pass you're own API key from console.developers.google for:
+ google OAuth 2.0: KEY_FOR_GOOGLE_AUTH,
+ google API key: API_GOOGLE_KEY 
+then remove .EXAMPLE and save
+
 
 To Run client:
 
