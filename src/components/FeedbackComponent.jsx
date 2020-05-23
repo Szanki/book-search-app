@@ -18,7 +18,7 @@ export default function FeedbackComponent({
   if (noBooks) {
     return noSearchTerm ? (
       <div className="feedback-component">
-        Please click on "Search" button to find some books{" "}
+        Please click on "Search" button to find some books.
       </div>
     ) : (
       <div className="feedback-component">Please fill search input above.</div>

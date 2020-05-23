@@ -18,10 +18,6 @@ export default function UserBooks() {
   }, []);
 
   const renderBookList = () => {
-    if (!isSignedIn) {
-      return <FeedbackComponent isNotLogged={isSignedIn} />;
-    }
-
     if (isPending) {
       return (
         <div className="spinner-container">
@@ -30,8 +26,13 @@ export default function UserBooks() {
       );
     }
 
-    if (!Object.values(filteredBooks).length) {
-      return <FeedbackComponent noUserBooks={!filteredBooks.length} />;
+    if (!Object.values(filteredBooks).length || !isSignedIn) {
+      return (
+        <FeedbackComponent
+          noUserBooks={!filteredBooks.length}
+          isNotLogged={isSignedIn}
+        />
+      );
     }
 
     return (
