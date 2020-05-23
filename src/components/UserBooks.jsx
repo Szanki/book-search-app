@@ -4,17 +4,24 @@ import { UserBooksContext } from "../context/UserBooksContext";
 import { CircularProgress } from "@material-ui/core";
 import Book from "./Book";
 import FeedbackComponent from "./FeedbackComponent";
+import { AuthContext } from "../context/AuthContext";
 
 export default function UserBooks() {
   const { fetchUserBooks, filteredBooks, isPending, userBooks } = useContext(
     UserBooksContext
   );
 
+  const { isSignedIn } = useContext(AuthContext);
+
   useEffect(() => {
     fetchUserBooks();
   }, []);
 
   const renderBookList = () => {
+    if (!isSignedIn) {
+      return <FeedbackComponent isNotLogged={isSignedIn} />;
+    }
+
     if (isPending) {
       return (
         <div className="spinner-container">
@@ -36,5 +43,5 @@ export default function UserBooks() {
     );
   };
 
-  return <div>{renderBookList()}</div>;
+  return renderBookList();
 }

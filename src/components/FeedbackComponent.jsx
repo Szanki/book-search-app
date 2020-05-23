@@ -5,6 +5,7 @@ export default function FeedbackComponent({
   noBooks,
   noSearchTerm,
   noUserBooks,
+  isNotLogged,
 }) {
   if (wasRequestEmpty) {
     return (
@@ -21,6 +22,13 @@ export default function FeedbackComponent({
       </div>
     ) : (
       <div className="feedback-component">Please fill search input above.</div>
+    );
+  }
+  if (!isNotLogged) {
+    return (
+      <div className="feedback-component">
+        To visit this page you need to be logged in.
+      </div>
     );
   }
   if (noUserBooks) {
