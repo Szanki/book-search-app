@@ -15,13 +15,6 @@ export default function HomeSearch() {
       <GoogleAuth />
       <div className="home-form-container">
         <div className="flex-form">
-          {/* TODO: My suggestion is to move this input to new component ( new jsx file) */}
-          {/* <HomeSearchInput
-            searchTerm={searchTerm}
-            setTerm={setTerm}
-            onSearchSubmit={onSearchSubmit}
-            fetchBooks={fetchBooks}
-          /> */}
           <input
             type="text"
             className="home-search"
@@ -37,12 +30,10 @@ export default function HomeSearch() {
         </div>
       </div>
       <div className="fullscreen-video-wrap">
-        {/* <video
+        <img
           className="background-video"
-          src={require("../media/New_Chapter_001_Videvo.mov")}
-          autoPlay
-          loop={true}
-        ></video> */}
+          src={require("../media/bookshelves.svg")}
+        ></img>
       </div>
     </>
   );

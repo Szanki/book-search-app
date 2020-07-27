@@ -21,9 +21,9 @@ export default function Book({ book, googleId }) {
   return (
     <Grid
       container
-      xs={12}
+      xs={10}
       xl={7}
-      lg={9}
+      md={8}
       className="book-container"
       justify="space-between"
     >
