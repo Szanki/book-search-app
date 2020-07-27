@@ -107,3 +107,19 @@ img {
 .user-not-logged {
   font-weight: 600;
 }
+/* footer */
+
+.footer-container {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-rate {
+  font-weight: 550;
+  font-size: 1.4rem;
+}
+
+.footer-slash {
+  margin: 3px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import { BookFooter } from "./BookFooter";
 
 export default function BookContent({
   title,
@@ -30,7 +31,7 @@ export default function BookContent({
         </Grid>
       </Grid>
       <Grid>
-        <p className="footer">Lorem ipsum, dolor</p>
+        <BookFooter />
       </Grid>
     </Grid>
   );
